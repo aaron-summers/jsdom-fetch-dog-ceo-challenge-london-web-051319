@@ -1,0 +1,38 @@
+.image-class {
+    padding: 5px;
+    height: 256px;
+    border-radius: 50%;
+}
+
+img {
+    min-width: none;
+}
+
+.alphabet {
+    list-style-type: none;
+    margin:90px auto 0;
+    padding:0;
+    cursor: pointer;
+    width:80%;
+    text-align:center;
+}
+
+.alphabet li {
+    float:left;
+    margin:0;
+    padding:0;
+    border-right:1px solid darkgrey;
+    font-size: 13px;
+    -moz-box-sizing:border-box;
+    color:black;
+    display:inline-block;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    width:3.84%;
+}
+
+.alphabet li:hover {
+    color:green;
+    background-color: lightgrey;
+}
