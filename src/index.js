@@ -31,7 +31,7 @@ function fetchBreeds() {
 // CHALLENGE 4
 function renderBreed(breeds) {
     // console.log(Object.keys(breeds)[i].indexOf(Object.values(breeds)[i]) > -1)
-    
+
     let selectors = document.getElementsByClassName("alphabet");
 
     for (let k = 0; k < selectors.length; k++) {
@@ -41,7 +41,7 @@ function renderBreed(breeds) {
                 let letter = event.target.innerText;
                 filterBreed(letter);
             }
-        });   
+        });
     }
 
     function filterBreed(userinput) {
@@ -66,41 +66,24 @@ function renderBreed(breeds) {
                     const li = document.createElement('li');
                     li.innerText = Object.keys(breeds)[x];
                     ul.appendChild(li);
-                    }
                 }
             }
         }
-
-        // if (!(Object.keys(breed)[i].indexOf(Object.values(breed)[i]) > -1)) {
-        //     li.innerText = Object.keys(breed)[i];
-        //     console.log(Object.values(breed)[i]);
-        //     ul.appendChild(li);
-
-        //     let childUl = document.createElement('ul');
-        //     let childLi = document.createElement('li');
-
-        //     li.appendChild(childUl);
-        //     childLi.innerText = Object.values(breed)[i];
-        //     childUl.appendChild(childLi);
-        // } else {
-        //     li.innerText = Object.keys(breed)[i];
-        //     ul.appendChild(li);
-        // }
-        // }
     }
+}
 
-    // CHALLENGE 3
-    ul.addEventListener('click', event => {
-        if (event.target && event.target.nodeName == 'LI') {
-            event.target.style.color = `${'#' + parseInt(Math.random() * 0xffffff).toString(16)}`;
-        }
-    });
+// CHALLENGE 3
+ul.addEventListener('click', event => {
+    if (event.target && event.target.nodeName == 'LI') {
+        event.target.style.color = `${'#' + parseInt(Math.random() * 0xffffff).toString(16)}`;
+    }
+});
 
-    // fetches 5 images of dogs at random when page loads
-    document.addEventListener('DOMContentLoaded', () => {
-        fetchImages();
-        fetchBreeds();
-    });
+// fetches 5 images of dogs at random when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    fetchImages();
+    fetchBreeds();
+});
 
 
 
